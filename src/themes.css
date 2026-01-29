@@ -1,3 +1,393 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b22312be56fe4e47dccdc8d28fa462010a5a10bcf2f800f331e63f58a7b253a7
-size 12220
+/* ========================================
+   THEME DEFINITIONS: KINETIC EINSTEIN
+======================================== */
+
+/* ----------------------------------------
+   1. Modern Apple HIG (Default / Base)
+---------------------------------------- */
+:root {
+    --color-system-gray-6: #F5F5F7;
+    --color-system-gray-5: #E5E5EA;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-apple-blue: #007AFF;
+    --font-sf-pro: 'SF Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --radius-l: 24px;
+    --radius-m: 16px;
+
+    /* Default Mapping */
+    --color-bg: var(--color-system-gray-6);
+    --color-text: var(--color-black);
+    --color-accent: var(--color-apple-blue);
+    --font-heading: var(--font-sf-pro);
+    --font-body: var(--font-sf-pro);
+}
+
+body.theme-apple-hig {
+    background-color: var(--color-system-gray-6);
+    color: var(--color-black);
+    font-family: var(--font-sf-pro);
+}
+
+/* ----------------------------------------
+   2. Material You (Dynamic)
+---------------------------------------- */
+body.theme-material-you {
+    --md-sys-color-primary: #6750A4;
+    --md-sys-color-surface: #FFFBFE;
+    --md-sys-color-on-surface: #1C1B1F;
+    --md-sys-radius: 28px;
+
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: 'Roboto', sans-serif;
+}
+
+body.theme-material-you .glass-panel {
+    background: #EADDFF;
+    /* Surface Container */
+    border-radius: var(--md-sys-radius);
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    backdrop-filter: none;
+    /* Material is solid */
+}
+
+body.theme-material-you .capsule-input {
+    background: #EADDFF;
+    border-radius: 9999px;
+    color: #1D192B;
+}
+
+/* ----------------------------------------
+   3. Flat UI (WinJS / Metro)
+---------------------------------------- */
+body.theme-flat-ui {
+    --win-color-bg: #1D1D1D;
+    --win-color-text: #FFFFFF;
+    --win-color-accent: #0078D7;
+
+    background-color: var(--win-color-bg);
+    color: var(--win-color-text);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body.theme-flat-ui .glass-panel {
+    background: #2D2D2D;
+    border: 2px solid #FFFFFF;
+    /* High contrast border */
+    border-radius: 0;
+    /* Sharp corners */
+    backdrop-filter: none;
+    box-shadow: none;
+}
+
+body.theme-flat-ui .capsule-input {
+    border-radius: 0;
+    border: 2px solid #FFFFFF;
+    background: #000000;
+}
+
+/* ----------------------------------------
+   4. Fluent 2 (Microsoft Mica)
+---------------------------------------- */
+body.theme-fluent-2 {
+    --fluent-bg: #202020;
+    --fluent-surface: rgba(255, 255, 255, 0.05);
+
+    background-color: var(--fluent-bg);
+    color: #FFFFFF;
+    font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif;
+}
+
+body.theme-fluent-2 .glass-panel {
+    background: var(--fluent-surface);
+    backdrop-filter: blur(40px);
+    /* Acrylic */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+/* ----------------------------------------
+   5. Skeuomorphism (RichUI / iOS 6)
+---------------------------------------- */
+body.theme-skeuo {
+    background-color: #C6C6C6;
+    background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+    /* Leather texture */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+body.theme-skeuo .glass-panel {
+    background: linear-gradient(to bottom, #F9F9F9 0%, #DEDEDE 100%);
+    border: 1px solid #A0A0A0;
+    border-radius: 8px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        0 2px 5px rgba(0, 0, 0, 0.3);
+    backdrop-filter: none;
+}
+
+body.theme-skeuo .capsule-input {
+    background: #FAFAFA;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #999;
+}
+
+/* ----------------------------------------
+   6. Liquid Glass (New Flagship)
+---------------------------------------- */
+body.theme-liquid-glass {
+    --liquid-bg: #Eef2f5;
+    background: radial-gradient(circle at 50% 50%, #ffffff 0%, #Eef2f5 100%);
+    color: #111;
+    font-family: var(--font-sf-pro);
+}
+
+body.theme-liquid-glass .glass-panel {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(60px) saturate(200%);
+    /* Blur 3XL */
+    -webkit-backdrop-filter: blur(60px) saturate(200%);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 20px 80px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dynamic Reflective Highlight */
+body.theme-liquid-glass .glass-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 32px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+body.theme-liquid-glass .capsule-input {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 122, 255, 0.15);
+}
+
+/* Common Utilities */
+.ios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--color-system-gray-5);
+    border-radius: var(--radius-m);
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.ios-list-item {
+    background: var(--color-white);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--color-black);
+    width: 100%;
+    text-align: left;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+}
+
+.ios-list-item:hover {
+    background: #F2F2F7;
+}
+
+/* Capsule Inputs */
+.capsule-input-container {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    z-index: 100;
+}
+
+.capsule-input {
+    width: 100%;
+    border-radius: 9999px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.capsule-input:focus-within {
+    transform: translateY(-4px) scale(1.01);
+}
+
+.capsule-field {
+    border: none;
+    background: transparent;
+    flex: 1;
+    font-size: 16px;
+    outline: none;
+}
+
+.capsule-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-apple-blue);
+    color: white;
+    border: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+/* iPadOS Split View & Settings Styles */
+.ipad-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: 100vh;
+    background: var(--color-system-gray-6);
+    font-family: var(--font-sf-pro);
+}
+
+.ipad-sidebar {
+    background: rgba(245, 245, 247, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ipad-content {
+    padding: 32px 40px;
+    overflow-y: auto;
+}
+
+.ipad-sidebar-group-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8E8E93;
+    text-transform: uppercase;
+    margin: 24px 12px 8px;
+    letter-spacing: -0.2px;
+}
+
+.ipad-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    font-weight: 400;
+    border: none;
+    background: transparent;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ipad-nav-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.ipad-nav-item.active {
+    background: rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.ipad-icon-box {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+/* Inset Grouped List */
+.inset-group {
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.inset-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: white;
+    border-bottom: 1px solid #E5E5EA;
+    font-size: 17px;
+    color: #000;
+}
+
+.inset-item:last-child {
+    border-bottom: none;
+}
+
+.inset-label {
+    flex: 1;
+}
+
+.inset-value {
+    color: var(--color-apple-blue);
+    text-align: right;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-family: var(--font-sf-pro);
+    background: transparent;
+    width: 60%;
+}
+
+.inset-value:focus {
+    color: #000;
+}
+
+/* Section Headers in Content */
+.content-header {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+.section-label {
+    font-size: 13px;
+    color: #6D6D72;
+    text-transform: uppercase;
+    margin: 0 0 8px 16px;
+}

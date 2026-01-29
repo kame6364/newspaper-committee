@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e34c941fa2fc3b6d05d52d967d51426a381d3f012728a58b99a789fdfd756af5
-size 412
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    allowedHosts: ["a5dbf54d60c2.ngrok-free.app", "e18fc3b81842.ngrok-free.app", ".ngrok-free.app"],
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
+  }
+})

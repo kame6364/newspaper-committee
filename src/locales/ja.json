@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:98ccffbf8ce3ca73ce8ac5cc9335b9f4376d30b71917ea365f0d8c1d3eb6c3eb
-size 1133
+{
+    "common": {
+        "loading": "読み込み中...",
+        "error": "エラーが発生しました",
+        "save": "保存",
+        "cancel": "キャンセル",
+        "status": "ステータス"
+    },
+    "nav": {
+        "home": "ホーム",
+        "news": "最新記事",
+        "about": "活動紹介",
+        "files": "Files",
+        "contact": "お問い合わせ",
+        "mypage": "マイページ",
+        "login": "ログイン",
+        "logout": "ログアウト"
+    },
+    "connect": {
+        "title": "Shinbun Connect",
+        "subtitle": "新聞係公式チャットプラットフォーム",
+        "online": "オンライン",
+        "openChat": {
+            "title": "オープンチャット",
+            "desc": "誰でも参加可能な公開チャットルームです。",
+            "button": "入室する"
+        },
+        "memberArea": {
+            "title": "メンバー限定エリア",
+            "desc": "新聞係メンバーのみがアクセスできる管理エリアです。",
+            "button": "ログイン"
+        }
+    }
+}

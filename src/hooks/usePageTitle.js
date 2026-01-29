@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95caea2cd76b65309ed31bdc665ae91bf50b167f6cfad100df4e0c26e504e953
-size 340
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export default function usePageTitle(title) {
+    const location = useLocation();
+
+    useEffect(() => {
+        const baseTitle = '新聞係';
+        document.title = title ? `${title} | ${baseTitle}` : baseTitle;
+    }, [title, location]);
+}

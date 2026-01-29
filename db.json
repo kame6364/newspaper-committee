@@ -1,3 +1,103 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:77ef52c03e921bddb1a0b2a01bf14dacfde7aa72176c845e3e317be0c45b9e4b
-size 2436
+{
+  "users": [
+    {
+      "id": "admin",
+      "username": "Shinbun",
+      "password": "kameisGOD82336@",
+      "role": "admin"
+    },
+    {
+      "id": "testuser",
+      "username": "User",
+      "password": "password",
+      "role": "user"
+    },
+    {
+      "username": "Dashboardhelper",
+      "password": "kameisGOD82336@",
+      "role": "user",
+      "id": "VymLITM"
+    },
+    {
+      "username": "Dstest",
+      "password": "dstest123@",
+      "role": "user",
+      "id": "lPpUZ5K"
+    },
+    {
+      "username": "admin",
+      "password": "@password",
+      "role": "admin",
+      "id": "i09DOv7"
+    }
+  ],
+  "articles": [
+    {
+      "title": "【問題】一部サービスが使用不可能になっております",
+      "category": "お知らせ",
+      "excerpt": "詳細を見る",
+      "id": "1767614211076",
+      "date": "2026.1.5",
+      "content": []
+    },
+    {
+      "title": "【復旧】サービスが使用可能に設定されました。",
+      "category": "お知らせ",
+      "excerpt": "サービスが使用できるようになりました。またテーマ(Preview)が追加",
+      "id": "1767667647964",
+      "date": "2026.1.6",
+      "content": [
+        {
+          "id": 1767667659562,
+          "type": "text",
+          "value": "Preview 12",
+          "font": "sans"
+        },
+        {
+          "id": 1767667667990,
+          "type": "text",
+          "value": "",
+          "font": "sans"
+        }
+      ]
+    },
+    {
+      "title": "Preview:V2.0 Start",
+      "category": "お知らせ",
+      "excerpt": "2xがスタートしました。",
+      "featuredImage": null,
+      "id": "1768378198865",
+      "date": "2026.1.14",
+      "content": []
+    }
+  ],
+  "pages": [
+    {
+      "id": "1767701713319",
+      "title": "リリースノート",
+      "slug": "releasenotes",
+      "showInNav": true,
+      "content": []
+    }
+  ],
+  "settings": {
+    "stats": {
+      "members": "1",
+      "history": "1",
+      "issues": "10~50"
+    },
+    "customFonts": []
+  },
+  "comments": [],
+  "reports": [],
+  "contacts": [],
+  "announcements": [
+    {
+      "id": 1767536747876,
+      "title": "サイトアップデート1.1",
+      "content": "新聞係公式サイトのシステムが変わりました。",
+      "date": "2026/1/4",
+      "isActive": true
+    }
+  ]
+}

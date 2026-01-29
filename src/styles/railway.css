@@ -1,0 +1,21 @@
+/* Railway Mode Animations */
+.railway-mode .card,
+.railway-mode .hero-content,
+.railway-mode .news-section,
+.railway-mode .about-section {
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+.railway-mode .header {
+    transition: background-color 0.8s ease;
+    background-color: #fff !important;
+    /* Ensure header stays visible or modifies */
+}
+
+/* Optional: Blur effect on body or main container */
+.railway-mode-active main {
+    filter: blur(2px) grayscale(80%);
+    transition: filter 0.8s ease;
+}

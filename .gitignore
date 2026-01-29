@@ -1,4 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f87f7f2dcd8adebda231899c152d3ce8c3fb6e76d410f1b8cb462034ff55e707
-size 273
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
 node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

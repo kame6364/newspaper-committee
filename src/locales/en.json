@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f98578100be7c6fb56f6712114c88f61304eabb99463d958e16a1d10d59cf28b
-size 918
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "save": "Save",
+        "cancel": "Cancel",
+        "status": "Status"
+    },
+    "nav": {
+        "home": "Home",
+        "news": "News",
+        "about": "About",
+        "files": "Files",
+        "contact": "Contact",
+        "mypage": "My Page",
+        "login": "Login",
+        "logout": "Logout"
+    },
+    "connect": {
+        "title": "Shinbun Connect",
+        "subtitle": "Official Press Committee Chat Platform",
+        "online": "Online",
+        "openChat": {
+            "title": "Open Chat",
+            "desc": "Public chat room open to everyone.",
+            "button": "Enter Room"
+        },
+        "memberArea": {
+            "title": "Members Area",
+            "desc": "Restricted area for committee members only.",
+            "button": "Login"
+        }
+    }
+}

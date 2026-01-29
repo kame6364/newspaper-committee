@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:772394b7283c2816974caa6276c3b3054e8b2562f7e3e9e8926fc87371410515
-size 2071
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../assets/Fonts/SanFrancisco/SF-Pro-Display-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../assets/Fonts/SanFrancisco/SF-Pro-Display-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../assets/Fonts/SanFrancisco/SF-Pro-Display-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../assets/Fonts/SanFrancisco/SF-Pro-Display-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --font-sf-pro: 'SF Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
